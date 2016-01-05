@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VAPI.Host
+namespace VSolution.VAPI.Host
 {
     class Program
     {

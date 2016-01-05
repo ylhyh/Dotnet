@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VRepository.Interface
+namespace VSolution.VEntity
 {
-    public class Class1
+    public abstract class BaseEntity
     {
+
     }
 }
