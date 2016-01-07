@@ -8,7 +8,7 @@ using System.Xml;
 namespace VSolution.VRepository.Interface
 {
     public interface IBaseRepository<T>
-        where T : class
+        where T : class,new()
     {
         IQueryable<T> GetEntityList();
         bool CreateEntity<T>(T entity);

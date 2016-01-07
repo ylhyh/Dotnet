@@ -8,8 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace VSolution.VAPI.Host
+namespace VSolution.VAPI.Host.Startup
 {
+    [assembly: OwinStartupAttribute(typeof(HostStartup))]
+
     public class HostStartup
     {
         public void Configuration(IAppBuilder appBuilder)
@@ -20,7 +22,9 @@ namespace VSolution.VAPI.Host
              * 2. Add NuGet package: Microsoft.AspNet.WebApi.Owin
              */
             HttpConfiguration config = new HttpConfiguration();
-            
+
+            IocConfig.Register(config);
+
             //appBuilder.Run(HandleRequest);
 
         }
