@@ -1,6 +1,6 @@
 using System;
 
-namespace VWeb.Areas.HelpPage.ModelDescriptions
+namespace VSolution.VWeb.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Describes a type model.

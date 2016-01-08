@@ -8,10 +8,10 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using VWeb.Providers;
-using VWeb.Models;
+using VSolution.VWeb.Providers;
+using VSolution.VWeb.Models;
 
-namespace VWeb
+namespace VSolution.VWeb
 {
     public partial class Startup
     {

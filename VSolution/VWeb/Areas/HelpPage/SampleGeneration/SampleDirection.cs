@@ -1,4 +1,4 @@
-namespace VWeb.Areas.HelpPage
+namespace VSolution.VWeb.Areas.HelpPage
 {
     /// <summary>
     /// Indicates whether the sample is used for request or response

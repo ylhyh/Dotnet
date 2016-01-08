@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace VWeb.Controllers
+namespace VSolution.VWeb.Controllers
 {
     [Authorize]
     public class ValuesController : ApiController

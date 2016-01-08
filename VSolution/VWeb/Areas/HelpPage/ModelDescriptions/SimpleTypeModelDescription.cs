@@ -1,4 +1,4 @@
-namespace VWeb.Areas.HelpPage.ModelDescriptions
+namespace VSolution.VWeb.Areas.HelpPage.ModelDescriptions
 {
     public class SimpleTypeModelDescription : ModelDescription
     {

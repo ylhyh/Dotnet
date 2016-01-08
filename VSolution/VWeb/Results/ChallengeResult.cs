@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace VWeb.Results
+namespace VSolution.VWeb.Results
 {
     public class ChallengeResult : IHttpActionResult
     {

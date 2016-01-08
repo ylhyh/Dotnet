@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace VWeb.Areas.HelpPage.ModelDescriptions
+namespace VSolution.VWeb.Areas.HelpPage.ModelDescriptions
 {
     internal static class ModelNameHelper
     {

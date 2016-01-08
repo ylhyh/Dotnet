@@ -13,11 +13,11 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using VWeb.Models;
-using VWeb.Providers;
-using VWeb.Results;
+using VSolution.VWeb.Models;
+using VSolution.VWeb.Providers;
+using VSolution.VWeb.Results;
 
-namespace VWeb.Controllers
+namespace VSolution.VWeb.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]

@@ -4,9 +4,9 @@ using System.Linq;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(VWeb.Startup))]
+[assembly: OwinStartup(typeof(VSolution.VWeb.Startup))]
 
-namespace VWeb
+namespace VSolution.VWeb
 {
     public partial class Startup
     {

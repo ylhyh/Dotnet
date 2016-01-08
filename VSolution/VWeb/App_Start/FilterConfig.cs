@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace VWeb
+namespace VSolution.VWeb
 {
     public class FilterConfig
     {

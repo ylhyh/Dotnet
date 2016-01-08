@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace VWeb.Models
+namespace VSolution.VWeb.Models
 {
     // AccountController 操作返回的模型。
 

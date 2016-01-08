@@ -9,9 +9,9 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using VWeb.Models;
+using VSolution.VWeb.Models;
 
-namespace VWeb.Providers
+namespace VSolution.VWeb.Providers
 {
     public class ApplicationOAuthProvider : OAuthAuthorizationServerProvider
     {
