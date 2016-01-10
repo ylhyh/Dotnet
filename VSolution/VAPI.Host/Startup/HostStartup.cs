@@ -21,10 +21,11 @@ namespace VSolution.VAPI.Host.Startup
              * Instruction:
              * 1. Add NuGet package: Microsoft.AspNet.WebApi.Core
              * 2. Add NuGet package: Microsoft.AspNet.WebApi.Owin
+             * 3. Uses GlobalConfiguration need to add package: Microsoft.AspNet.WebApi.WebHost (System.Web.Http.WebHost)
              */
-            HttpConfiguration config = new HttpConfiguration();
-
-            IocConfig.Register(config);
+            //HttpConfiguration config = new HttpConfiguration();
+            GlobalConfiguration.Configure(IocConfig.Register);
+            //IocConfig.Register(config);
 
             //appBuilder.Run(HandleRequest);
 
