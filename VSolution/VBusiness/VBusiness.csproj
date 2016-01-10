@@ -42,7 +42,20 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VBusiness.Interface\VBusiness.Interface.csproj">
+      <Project>{ca6a7399-06a0-4f9a-b74c-f88fe115d90d}</Project>
+      <Name>VBusiness.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VRepository.Interface\VRepository.Interface.csproj">
+      <Project>{cc66d0bf-7dc4-426f-a172-472a03f100e5}</Project>
+      <Name>VRepository.Interface</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y $(TargetDir)$(TargetName).* $(ProjectDir)..\VAPI.Host\bin\$(ConfigurationName)\</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -4,13 +4,13 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VSolution.VEntity;
 using VSolution.VRepository.Interface;
 
 namespace VSolution.VRepository.SqlServer
 {
-    public class BaseRepository<T> : IBaseRepository<T> where T : class,new()
+    public class BaseRepository<T> where T : BaseEntity
     {
-
         public DbContext Context
         {
             get
@@ -24,32 +24,32 @@ namespace VSolution.VRepository.SqlServer
             throw new NotImplementedException();
         }
 
-        public bool CreateEntity<T>(T entity)
+        public bool CreateEntity(T entity)
         {
             throw new NotImplementedException();
         }
 
-        public int CreateEntities<T>(ICollection<T> entities)
+        public int CreateEntities(ICollection<T> entities)
         {
             throw new NotImplementedException();
         }
 
-        public bool UpdateEntity<T>(T entity)
+        public bool UpdateEntity(T entity)
         {
             throw new NotImplementedException();
         }
 
-        public int UpdateEntities<T>(ICollection<T> entities)
+        public int UpdateEntities(ICollection<T> entities)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteEntity<T>(T entity)
+        public bool DeleteEntity(T entity)
         {
             throw new NotImplementedException();
         }
 
-        public int DeleteEntities<T>(ICollection<T> entities)
+        public int DeleteEntities(ICollection<T> entities)
         {
             throw new NotImplementedException();
         }

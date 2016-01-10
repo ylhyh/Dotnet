@@ -15,7 +15,7 @@ namespace VSolution.VAPI.Host.Startup
         {
             ContainerBuilder containerBuilder = new ContainerBuilder();
             containerBuilder.RegisterModule(new ConfigurationSettingsReader("autofac","autofac.config"));
-            containerBuilder.Build();
+            var container = containerBuilder.Build();
         }
     }
 }

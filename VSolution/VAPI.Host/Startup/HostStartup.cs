@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
+using VSolution.VAPI.Host.Startup;
+
+[assembly: OwinStartupAttribute(typeof(HostStartup))]
 
 namespace VSolution.VAPI.Host.Startup
 {
-    [assembly: OwinStartupAttribute(typeof(HostStartup))]
-
     public class HostStartup
     {
         public void Configuration(IAppBuilder appBuilder)

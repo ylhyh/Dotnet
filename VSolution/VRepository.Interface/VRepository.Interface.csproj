@@ -40,9 +40,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IBaseRepository.cs" />
+    <Compile Include="IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VEntity\VEntity.csproj">
+      <Project>{ca35ba63-ba33-4e27-9257-4707e2d4eb3a}</Project>
+      <Name>VEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /y $(TargetDir)$(TargetName).* $(ProjectDir)..\VAPI.Host\bin\$(ConfigurationName)\</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
