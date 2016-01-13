@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VSolution.VBusiness.Interface;
 
-namespace VBusiness
+namespace VSolution.VBusiness
 {
-    public class Class1
+    public class UserBusiness : BaseBusiness, IUserBusiness
     {
+
     }
 }

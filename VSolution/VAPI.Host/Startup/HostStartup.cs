@@ -26,7 +26,7 @@ namespace VSolution.VAPI.Host.Startup
             //HttpConfiguration config = new HttpConfiguration();
             GlobalConfiguration.Configure(IocConfig.Register);
             //IocConfig.Register(config);
-
+            appBuilder.UseWebApi(GlobalConfiguration.Configuration);
             //appBuilder.Run(HandleRequest);
 
         }

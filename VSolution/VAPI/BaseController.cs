@@ -8,7 +8,7 @@ using System.Web.Http.Controllers;
 
 namespace VSolution.VAPI
 {
-    public class ApiControllerBase : ApiController
+    public class BaseController : ApiController
     {
         /* Instruction:
          * 1. Add NuGet package: Microsoft ASP.NET Web API Core Libraries.

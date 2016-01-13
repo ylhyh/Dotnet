@@ -54,7 +54,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiControllerBase.cs" />
+    <Compile Include="BaseController.cs" />
+    <Compile Include="UserController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,6 +66,10 @@
     <ProjectReference Include="..\VBusiness.Interface\VBusiness.Interface.csproj">
       <Project>{ca6a7399-06a0-4f9a-b74c-f88fe115d90d}</Project>
       <Name>VBusiness.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VEntity\VEntity.csproj">
+      <Project>{ca35ba63-ba33-4e27-9257-4707e2d4eb3a}</Project>
+      <Name>VEntity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

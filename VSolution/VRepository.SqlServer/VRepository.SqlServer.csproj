@@ -69,7 +69,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /y $(TargetDir)$(TargetName).* $(ProjectDir)..\VAPI.Host\bin\$(ConfigurationName)\</PostBuildEvent>
+    <PostBuildEvent>xcopy /y $(TargetDir)$(TargetName).* $(ProjectDir)..\VAPI.Host\bin\$(ConfigurationName)\
+xcopy /y $(TargetDir)EntityFramework.* $(ProjectDir)..\VAPI.Host\bin\$(ConfigurationName)\</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
