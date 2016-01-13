@@ -21,7 +21,7 @@ namespace VSolution.VRepository.SqlServer
 
         public IQueryable<T> GetEntityList()
         {
-            throw new NotImplementedException();
+            return Context.Set<T>().AsQueryable();
         }
 
         public bool CreateEntity(T entity)
