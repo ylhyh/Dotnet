@@ -19,3 +19,4 @@
 /VSolution/VAPI/bin
 /VSolution/VAPI.Host/obj
 /VSolution/VAPI.Host/bin
+*.user
