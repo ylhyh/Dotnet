@@ -42,6 +42,12 @@
     <Compile Include="IUserBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VEntity\VEntity.csproj">
+      <Project>{ca35ba63-ba33-4e27-9257-4707e2d4eb3a}</Project>
+      <Name>VEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

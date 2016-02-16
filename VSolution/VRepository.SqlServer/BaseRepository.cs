@@ -26,7 +26,7 @@ namespace VSolution.VRepository.SqlServer
 
         public bool CreateEntity(T entity)
         {
-            throw new NotImplementedException();
+            Context.
         }
 
         public int CreateEntities(ICollection<T> entities)
