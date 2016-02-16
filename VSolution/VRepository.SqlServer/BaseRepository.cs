@@ -11,11 +11,11 @@ namespace VSolution.VRepository.SqlServer
 {
     public class BaseRepository<T> where T : BaseEntity
     {
-        public DbContext Context
+        public DataContext Context
         {
             get
             {
-                return new DbContext("VDatabaseConnect");
+                return new DataContext();
             }
         }
 
@@ -26,7 +26,9 @@ namespace VSolution.VRepository.SqlServer
 
         public bool CreateEntity(T entity)
         {
-            Context.
+            Context.Set<T>().Add(entity);
+            Context.Entry<T>(entity).State = EntityState.Added;
+            return Context.SaveChanges() == 1;
         }
 
         public int CreateEntities(ICollection<T> entities)

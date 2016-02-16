@@ -65,6 +65,10 @@
     <Compile Include="UserBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{bdd3b8c5-a1db-4da4-a563-74e6ca654f51}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VBusiness.Interface\VBusiness.Interface.csproj">
       <Project>{ca6a7399-06a0-4f9a-b74c-f88fe115d90d}</Project>
       <Name>VBusiness.Interface</Name>
@@ -77,10 +81,6 @@
       <Project>{cc66d0bf-7dc4-426f-a172-472a03f100e5}</Project>
       <Name>VRepository.Interface</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

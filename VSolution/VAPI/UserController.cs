@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
+using VSolution.Common;
+using VSolution.VBusiness.Interface;
 using VSolution.VEntity;
 
 namespace VSolution.VAPI
@@ -11,9 +13,10 @@ namespace VSolution.VAPI
     public class UserController : BaseController
     {
         [HttpPost, Route("user")]
-        public void Register(User user)
+        public bool Register(User user)
         {
-            
+            var userBusiness = GlobalObject.HttpConfiguration.DependencyResolver.GetService(typeof(IUserBusiness)) as IUserBusiness;
+            return userBusiness.Register(user);
         }
     }
 }

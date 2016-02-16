@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VSolution.Common;
 using VSolution.VBusiness.Interface;
 using VSolution.VEntity;
 using VSolution.VRepository.Interface;
@@ -13,7 +14,7 @@ namespace VSolution.VBusiness
     {
         public bool Register(User user)
         {
-            var userRepository = Resolver.GetService(typeof(IUserRepository)) as IUserRepository;
+            var userRepository = GlobalObject.HttpConfiguration.DependencyResolver.GetService(typeof(IUserRepository)) as IUserRepository;
             return userRepository != null && userRepository.CreateEntity(user);
         }
     }

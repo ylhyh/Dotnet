@@ -11,12 +11,5 @@ namespace VSolution.VBusiness
 {
     public class BaseBusiness
     {
-        internal IDependencyResolver Resolver
-        {
-            get
-            {
-                return GlobalConfiguration.Configuration.DependencyResolver;
-            }
-        }
     }
 }
