@@ -24,10 +24,10 @@ namespace VSolution.VRepository.SqlServer
             return Context.Set<T>().AsQueryable();
         }
 
-        public bool CreateEntity(T entity)
+        public virtual bool CreateEntity(T entity)
         {
-            Context.Set<T>().Add(entity);
-            Context.Entry<T>(entity).State = EntityState.Added;
+            //Context.Set<T>().Add(entity);
+            Context.Entry(entity).State = EntityState.Added;
             return Context.SaveChanges() == 1;
         }
 

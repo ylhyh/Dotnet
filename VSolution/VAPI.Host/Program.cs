@@ -1,4 +1,5 @@
-﻿using Microsoft.Owin.Hosting;
+﻿using System.IO;
+using Microsoft.Owin.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,9 @@ namespace VSolution.VAPI.Host
              */
             using (WebApp.Start(url: "http://localhost:8800"))
             {
+                //http://blogs.msdn.com/b/dataaccess/archive/2005/10/28/486273.aspx
+                AppDomain.CurrentDomain.SetData("DataDirectory", Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data"));
+
                 Console.WriteLine("API host is running...");
                 Console.ReadLine();
             }

@@ -10,13 +10,21 @@ using VSolution.VEntity;
 
 namespace VSolution.VAPI
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class UserController : BaseController
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         [HttpPost, Route("user")]
         public bool Register(User user)
         {
             var userBusiness = GlobalObject.HttpConfiguration.DependencyResolver.GetService(typeof(IUserBusiness)) as IUserBusiness;
-            return userBusiness.Register(user);
+            return userBusiness != null && userBusiness.Register(user);
         }
     }
 }

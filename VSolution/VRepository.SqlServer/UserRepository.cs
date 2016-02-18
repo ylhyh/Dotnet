@@ -10,5 +10,10 @@ namespace VSolution.VRepository.SqlServer
 {
     public class UserRepository : BaseRepository<User>, IUserRepository
     {
+        //public new bool CreateEntity(User entity)
+        //{
+        //    Context.User.Add(entity);
+        //    return Context.SaveChanges() == 1;
+        //}
     }
 }
