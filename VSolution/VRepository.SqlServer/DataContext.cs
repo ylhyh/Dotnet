@@ -13,15 +13,15 @@ namespace VSolution.VRepository.SqlServer
     {
         static DataContext()
         {
-            Database.SetInitializer<DataContext>(new CreateDatabaseIfNotExists<DataContext>());
+            //Database.SetInitializer<DataContext>(new CreateDatabaseIfNotExists<DataContext>());
         }
         
         public DataContext()
             : base("VDatabaseConnect")
         {
             //禁用延迟加载
-            this.Configuration.LazyLoadingEnabled = false;
-            this.Configuration.ProxyCreationEnabled = false;
+            //this.Configuration.LazyLoadingEnabled = false;
+            //this.Configuration.ProxyCreationEnabled = false;
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
