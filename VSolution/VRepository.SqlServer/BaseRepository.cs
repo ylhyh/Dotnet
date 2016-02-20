@@ -31,7 +31,8 @@ namespace VSolution.VRepository.SqlServer
 
             using (var db = new DataContext())
             {
-                db.Users.Add(entity as User);
+                //db.Users.Add(entity as User);
+                db.Set<T>().Add(entity);
                 return db.SaveChanges() > 0;
             }
         }
