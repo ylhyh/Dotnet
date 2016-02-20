@@ -26,12 +26,13 @@ namespace VSolution.VRepository.SqlServer
 
         public virtual bool CreateEntity(T entity)
         {
-            Context.Set<T>().Add(entity);
-            return Context.SaveChanges() == 1;
+            //Context.Set<T>().Add(entity);
+            //return Context.SaveChanges() == 1;
 
             using (var db = new DataContext())
             {
-
+                db.Users.Add(entity as User);
+                return db.SaveChanges() > 0;
             }
         }
 
